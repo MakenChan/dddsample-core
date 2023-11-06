@@ -20,6 +20,7 @@ public final class Location implements Entity<Location> {
   public long id;
 
   @Column(nullable = false, unique = true, updatable = false)
+  //地址编码
   public String unlocode;
 
   @Column(nullable = false)

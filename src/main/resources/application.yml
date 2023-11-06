@@ -21,9 +21,11 @@ spring:
             hibernate:
                 format_sql: true
         show-sql: true
+        hibernate:
+            ddl-auto: create-drop
     dataSource:
-        db_name: dddsample
-        driver_class: org.hsqldb.jdbcDriver
-        url: jdbc:hsqldb:mem:dddsample
-        username: sa
-        password: ""
+        db_name: oauth
+        driver_class: com.mysql.cj.jdbc.Drive
+        url: jdbc:mysql://192.168.10.169:3306/oauth?serverTimezone=GMT%2B8&characterEncoding=utf8&useSSL=false
+        username: root
+        password: xsq123456
