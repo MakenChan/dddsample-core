@@ -58,14 +58,25 @@ public class Cargo implements Entity<Cargo> {
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "origin_id")
   public Location origin;
-
+  /**
+   *描述货物的起源地和目的地，和到达的截止日期。
+   *
+   */
   @Embedded
   public RouteSpecification routeSpecification;
 
+  /**
+   *
+   * 行程包括一个或多个航段。
+   *
+   */
   @OneToMany(cascade = CascadeType.ALL)
   @JoinColumn(name = "cargo_id")
   public List<Leg> itinerary; // TODO figure out if we can map an Itinerary object instead
-
+  /**
+   * 运输货物
+   *
+   */
   @Embedded
   public Delivery delivery;
 

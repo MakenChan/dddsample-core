@@ -16,6 +16,11 @@ parseFailureDirectory: /tmp/failed
 brokerUrl: "vm://localhost?broker.persistent=false&broker.useJmx=false"
 
 spring:
+    jpa:
+        properties:
+            hibernate:
+                format_sql: true
+        show-sql: true
     dataSource:
         db_name: dddsample
         driver_class: org.hsqldb.jdbcDriver
